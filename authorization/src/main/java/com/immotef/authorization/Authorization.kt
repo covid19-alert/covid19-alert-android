@@ -51,8 +51,6 @@ internal class AuthorizationManager(
         token = data.token
 
         preferencesFacade.saveString(text = data.token, key = tokenKey)
-
-
     }
 
     override suspend fun saveOnBoardingFinished() {
@@ -111,7 +109,5 @@ internal class AuthorizationManager(
             else -> NotLoggedState
         }
     }
-
-
 }
 
