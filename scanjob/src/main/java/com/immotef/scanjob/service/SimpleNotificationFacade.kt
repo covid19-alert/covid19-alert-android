@@ -59,7 +59,6 @@ class SimpleNotificationFacade(
 
     override fun finish() {
         notificationManager.cancel(id)
-        notification
     }
 
     private fun createBuilder(): NotificationCompat.Builder {
