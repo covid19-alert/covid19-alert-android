@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_graph.xml"
+        app:startDestination="@id/registerFragment">
+
+    <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.immotef.register.RegisterFragment"
+            android:label="RegisterFragment">
+        <action
+                android:id="@+id/action_registerFragment_to_dashboardFragment"
+                app:destination="@id/dashboardFragment"
+                app:popUpTo="@id/registerFragment"
+                app:popUpToInclusive="true" />
+        <action
+                android:id="@+id/action_registerFragment_to_onboardingFragment"
+                app:destination="@id/onboardingFragment"
+                app:popUpTo="@id/registerFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/dashboardFragment"
+            android:name="com.immotef.dashboard.DashboardFragment"
+            android:label="DashboardFragment">
+
+        <action
+                android:id="@+id/action_dashboardFragment_to_webViewFragment"
+                app:destination="@id/webViewFragment">
+            <argument
+                    android:name="@string/url_key"
+                    android:defaultValue="null"
+                    app:argType="string" />
+        </action>
+        <action
+                android:id="@+id/action_dashboardFragment_to_reportFlowFragment"
+                app:destination="@id/reportFlowFragment" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/onboardingFragment"
+            android:name="com.immotef.onboarding.OnboardingFragment"
+            android:label="OnboardingFragment" />
+    <fragment
+            android:id="@+id/webViewFragment"
+            android:name="com.immotef.web.WebViewFragment"
+            android:label="WebViewFragment" />
+    <fragment
+            android:id="@+id/reportFlowFragment"
+            android:name="com.immotef.reportinfection.ReportFlowFragment"
+            android:label="ReportFlowFragment" />
+    <action
+            android:id="@+id/action_global_reportFlowFragment"
+            app:destination="@id/reportFlowFragment" >
+        <argument android:name="@string/report_id_key" app:argType="long" android:defaultValue="-1L"/>
+        <argument android:name="@string/report_time_key" app:argType="long" android:defaultValue="-1L"/>
+    </action>
+</navigation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_date_label" translatable="false">dd/mm/yyyy</string>
+
+    <string name="image_uri_argument" translatable="false">image_uri_argument_key</string>
+    <string name="report_id_key" translatable="false">report_infection_id_screen</string>
+    <string name="report_time_key" translatable="false">report_infection_time_screen</string>
+</resources>

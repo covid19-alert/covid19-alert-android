@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout   xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/drawLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_50"
+            android:visibility="gone"
+            >
+
+        <tech.picnic.fingerpaintview.FingerPaintImageView
+                android:id="@+id/finger"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/double_margin"
+                app:inEditMode="true"
+                app:layout_constraintBottom_toTopOf="@+id/undo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/undo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/double_margin"
+                android:paddingTop="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingBottom="@dimen/margin"
+                android:text="@string/undo"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/processLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/double_margin"
+                android:paddingTop="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingBottom="@dimen/margin"
+                android:text="@string/clear"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/processLayout"
+                app:layout_constraintStart_toEndOf="@+id/undo"
+                />
+
+        <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/double_margin"
+                android:paddingTop="@dimen/margin"
+                android:paddingBottom="@dimen/margin"
+                android:text="@string/save_image"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/processLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+        <LinearLayout
+                android:id="@+id/processLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#515C6B"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    >
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/half_margin"
+                        >
+
+                    <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="Red"
+                            style="@style/Text.White"
+                            />
+
+                    <SeekBar
+                            android:id="@+id/red"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/half_margin"
+                        >
+
+                    <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/green"
+                            style="@style/Text.White"
+                            />
+
+                    <SeekBar
+                            android:id="@+id/green"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/half_margin"
+                        >
+
+                    <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/blue"
+                            style="@style/Text.White"
+                            />
+
+                    <SeekBar
+                            android:id="@+id/blue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/half_margin"
+                        >
+
+                    <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tolerance"
+                            style="@style/Text.White"
+                            />
+
+                    <SeekBar
+                            android:id="@+id/tolerance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="100"
+                            android:progress="1"
+                            />
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/half_margin"
+                        >
+
+                    <TextView
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:text="Width"
+                            style="@style/Text.White"
+                            />
+
+                    <SeekBar
+                            android:id="@+id/width"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="80"
+                            android:progress="20"
+                            />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    >
+
+                <TextView
+                        android:id="@+id/colorPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        style="@style/Text.White"
+                        />
+
+                <RadioGroup
+                        android:id="@+id/typeGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checkedButton="@id/normal"
+                        >
+
+                    <RadioButton
+                            android:id="@+id/normal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Normal"
+                            
+                            style="@style/Text.White"
+                            />
+
+                    <RadioButton
+                            android:id="@+id/emboss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Emboss"
+                            style="@style/Text.White"
+                            />
+
+                    <RadioButton
+                            android:id="@+id/blur"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Blur"
+                            style="@style/Text.White"
+                            />
+                </RadioGroup>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cropLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_50"
+
+            >
+        <com.theartofdev.edmodo.cropper.CropImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/cropButton"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/cropImage"/>
+        <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:id="@+id/cropButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crop"
+
+                android:layout_margin="@dimen/double_margin"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

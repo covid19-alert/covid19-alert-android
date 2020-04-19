@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.immotef.coronavirusblockade"
+        minSdkVersion min_sdk_version
+        targetSdkVersion compile_sdk_version
+        versionCode 20
+        versionName "0.20"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        debug{
+            buildConfigField "String", "API_URL", '""'
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "API_URL", '""'
+        }
+    }
+
+}
+
+dependencies {
+    implementation project(":utils:core")
+    implementation project(":bluetooth:beaconscanner")
+    implementation project(":bluetooth:ibeaconpretender")
+    implementation project(":utils:preferences")
+    implementation project(":scanjob")
+    implementation project(":bluetooth:beacon")
+    implementation project(":authorization")
+    implementation project(":utils:network")
+    implementation project(":screens:register")
+    implementation project(":meetrepository")
+    implementation project(":screens:dashboard")
+    implementation project(":db")
+    implementation project(":utils:styling")
+    implementation project(":screens:onboarding")
+    implementation project(":screens:reportdialog")
+    implementation project(":web")
+    implementation project(":boot")
+    implementation project(":utils:imageloading")
+    implementation project(":screens:reportinfection")
+    implementation project(":firebase:pushnotification")
+    implementation project(":firebase:dynamic_links")
+    implementation project(":featureflag")
+    implementation project(":uniquemeetrepository")
+    implementation project(":dashboardrepository")
+    implementation project(":infectedrepository")
+
+    implementation navigations
+    implementation crypto
+    implementation standards
+    implementation constrain
+    implementation depedency_injections
+    implementation firebase
+}

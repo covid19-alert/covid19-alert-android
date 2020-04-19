@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="what_can_you_do_url" translatable="false">https://covid19.infermedica.com/%1$s/</string>
+    <string name="check_current_state" translatable="false">check_state_key</string>
+</resources>

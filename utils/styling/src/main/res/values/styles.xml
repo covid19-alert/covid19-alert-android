@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text">
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/font_std</item>
+    </style>
+
+    <style name="Text.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Text.Label">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="Text.SmallText">
+        <item name="android:textSize">@dimen/font_small</item>
+        <item name="android:textColor">@color/black_50</item>
+    </style>
+
+    <style name="Text.SmallTitle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="Text.SmallTitle.Red">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="Text.SmallTitle.SingleLine">
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Text.DashboardNumberHeader">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:lines">2</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">40dp</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginRight">40dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.DashboardNumberValue">
+        <item name="android:textSize">40dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text.ScreenTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_screen_title</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textSize">@dimen/font_big</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.SmallerTitle">
+        <item name="android:textSize">@dimen/font_bigger</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="TextButtonStyle">
+        <item name="android:background">@drawable/radial_blue_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/font_bigger</item>
+        <item name="android:padding">@dimen/double_margin</item>
+    </style>
+
+    <style name="TextButtonStyle.BlueStroke">
+        <item name="android:background">@drawable/radial_blue_stroke_selector</item>
+        <item name="android:textColor">@color/stroke_button_font_color</item>
+    </style>
+
+    <style name="Text.CircleInformText">
+        <item name="android:background">@drawable/circle_color_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">14sp</item>
+        <item name="autoSizeMaxTextSize">200sp</item>
+        <item name="android:padding">@dimen/margin</item>
+    </style>
+
+    <style name="Text.ScreenTitle.AdjustableFont">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/font_screen_title</item>
+        <item name="android:gravity">center</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">@dimen/font_screen_title</item>
+        <item name="autoSizeMaxTextSize">46sp</item>
+    </style>
+
+    <style name="Text.InfectedList">
+        <item name="android:textSize">@dimen/font_std</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:drawablePadding">@dimen/margin</item>
+    </style>
+
+    <style name="Text.InformativeText">
+        <item name="android:textSize">@dimen/font_bigger</item>
+    </style>
+
+    <style name="Text.InformativeText.small">
+        <item name="android:textSize">@dimen/font_small</item>
+    </style>
+
+    <style name="Text.BackgroundSheetInform">
+        <item name="android:background">@color/background_sheet_color</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingTop">@dimen/double_margin</item>
+        <item name="android:paddingBottom">@dimen/double_margin</item>
+        <item name="android:paddingStart">@dimen/margin</item>
+        <item name="android:paddingEnd">@dimen/margin</item>
+        <item name="android:textColorHint">@color/font_color</item>
+    </style>
+
+
+    <style name="Text.Settings">
+        <item name="android:padding">@dimen/double_margin</item>
+        <item name="android:textSize">@dimen/font_bigger</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+</resources>

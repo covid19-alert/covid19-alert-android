@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/registerRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RegisterFragment"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/quad_margin"
+            android:paddingRight="@dimen/quad_margin"
+            >
+
+        <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/quad_margin"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+        <TextView
+                android:id="@+id/privacy_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="@dimen/font_bigger"
+                app:layout_constraintBottom_toTopOf="@+id/registerButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/acceptPolicySwitch"
+                tools:text="@string/register_switch_text"
+                android:layout_marginBottom="@dimen/triple_margin"
+                />
+
+        <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/acceptPolicySwitch"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                app:layout_constraintBottom_toBottomOf="@+id/privacy_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/privacy_text"
+                />
+
+        <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/double_margin"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/radial_blue_selector"
+                android:text="@string/register"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/font_bigger"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

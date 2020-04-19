@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="double_margin">16dp</dimen>
+    <dimen name="quad_margin">32dp</dimen>
+    <dimen name="triple_margin">24dp</dimen>
+    <dimen name="lower_gap">20dp</dimen>
+    <dimen name="font_screen_title">24sp</dimen>
+    <dimen name="font_title">22sp</dimen>
+    <dimen name="font_big">20sp</dimen>
+    <dimen name="half_margin">4dp</dimen>
+    <dimen name="font_std">14sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_bigger">18sp</dimen>
+    <dimen name="corner_radius">10dp</dimen>
+</resources>

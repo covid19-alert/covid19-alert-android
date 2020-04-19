@@ -1,0 +1,6 @@
+<manifest
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.immotef.db">
+
+    <uses-sdk tools:overrideLibrary="androidx.security" />
+</manifest>

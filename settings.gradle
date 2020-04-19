@@ -1,0 +1,42 @@
+rootProject.name='Coronavirus Blockade'
+include ':app'
+
+include ':scanjob'
+include ':authorization'
+include ':db'
+include ':meetrepository'
+
+include ':web'
+include ':boot'
+
+include ':screens:dashboard'
+include ':screens:reportinfection'
+include ':screens:onboarding'
+include ':screens:register'
+
+include ':firebase:pushnotification'
+include ':firebase:dynamic_links'
+
+include ':widgets:fingerpaintview'
+include ':widgets:arch-library'
+
+include ":utils:core"
+include ":utils:imageloading"
+include ":utils:network"
+include ":utils:preferences"
+include ":utils:styling"
+include ":utils:testutils"
+
+include ':bluetooth:beacon'
+include ':bluetooth:beaconscanner'
+include ':bluetooth:btmanager'
+include ':bluetooth:ibeaconpretender'
+include ':screens:reportdialog'
+
+include ':screens:reportrecoverydialog'
+include ':featureflag'
+include ':dashboardrepository'
+include ':uniquemeetrepository'
+
+
+include ':infectedrepository'

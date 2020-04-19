@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/reportRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/triple_margin"
+            android:paddingEnd="@dimen/triple_margin"
+            android:paddingBottom="@dimen/triple_margin"
+            >
+        <ImageView
+                android:id="@+id/reportGoBackButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/triple_margin"
+                android:src="@drawable/ic_arrow_back_black_24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        <TextView
+                android:id="@+id/reportTitleText"
+                style="@style/Text.ScreenTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:text="@string/report_screen_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportGoBackButton"
+                />
+
+        <TextView
+                android:id="@+id/reportSubtitleText"
+                style="@style/Text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:text="@string/report_subtitle_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportTitleText"
+                />
+
+        <TextView
+                android:id="@+id/reportDateLabel"
+                style="@style/Text.Label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:text="@string/report_date_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportSubtitleText"
+                />
+
+        <TextView
+                android:id="@+id/reportDateText"
+                style="@style/Text.BackgroundSheetInform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/half_margin"
+                android:hint="@string/hint_date_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportDateLabel"
+                />
+
+        <FrameLayout
+                android:id="@+id/pictureFrameLayout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/double_margin"
+                android:background="@drawable/grey_rectangle_backgroun"
+                app:layout_constraintBottom_toTopOf="@+id/reportConfirmButton"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reportDateText"
+                >
+
+
+            <TextView
+                    android:id="@+id/pictureTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|start"
+                    android:layout_margin="@dimen/margin"
+                    android:layout_marginTop="@dimen/double_margin"
+                    android:hint="@string/project_create_picture_label"
+                    />
+
+            <ImageView
+                    android:id="@+id/reportImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_camera"
+                    />
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/reportConfirmButton"
+                style="@style/TextButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/double_margin"
+                android:text="@string/confirm"
+                app:layout_constraintBottom_toTopOf="@+id/reportCancelButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        <TextView
+                android:id="@+id/reportCancelButton"
+                style="@style/TextButtonStyle.BlueStroke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

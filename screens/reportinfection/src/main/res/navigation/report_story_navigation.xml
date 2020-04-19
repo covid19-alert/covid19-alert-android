@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/report_story_navigation"
+        app:startDestination="@id/reportInfectionFragment">
+
+    <fragment
+            android:id="@+id/reportInfectionFragment"
+            android:name="com.immotef.reportinfection.report.ReportInfectionFragment"
+            android:label="ReportInfectionFragment" >
+        <action
+                android:id="@+id/action_reportInfectionFragment_to_blurrImageFragment"
+                app:destination="@id/blurrImageFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/blurrImageFragment"
+            android:name="com.immotef.reportinfection.imageblurring.BlurrImageFragment"
+            android:label="BlurrImageFragment" />
+</navigation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="@color/button_color">
+    <item>
+        <selector>
+            <item
+                    android:drawable="@drawable/radial_stroke_not_enabled"
+                    android:state_enabled="false" />
+            <item android:drawable="@drawable/radial_blue_stroke_ripple_button" />
+        </selector>
+    </item>
+</ripple>

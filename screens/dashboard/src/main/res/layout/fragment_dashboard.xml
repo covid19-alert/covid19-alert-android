@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/dashboardRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".DashboardFragment"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/low_background"
+            >
+
+        <ImageView
+                android:id="@+id/dashboardShareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/double_margin"
+                android:layout_marginEnd="@dimen/double_margin"
+                android:src="@drawable/ic_share_icon_48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/double_margin"
+                android:layout_marginBottom="-50dp"
+                app:layout_constraintBottom_toTopOf="@+id/helpViewImages"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+            <ImageView
+                    android:id="@+id/dashboardDocBackIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginTop="@dimen/double_margin"
+                    android:src="@drawable/ic_low_risk_background"
+                    />
+
+            <ImageView
+                    android:id="@+id/dashboardDocIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/double_margin"
+                    android:src="@drawable/ic_doctor_visual"
+
+                    />
+        </FrameLayout>
+
+        <TextView
+                android:id="@+id/dashboardTitleText"
+                style="@style/Text.ScreenTitle.AdjustableFont"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_margin="@dimen/double_margin"
+                android:gravity="top|start"
+                android:maxLines="3"
+                android:paddingEnd="80dp"
+                app:layout_constraintBottom_toTopOf="@+id/dashboardInfoLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Risk of being \n infected tralala hopssasa \n tutaj bedzie sie dzialo"
+                />
+
+        <View
+                android:id="@+id/helpViewImages"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dashboardInfoLayout"
+                />
+
+        <LinearLayout
+                android:id="@+id/dashboardInfoLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/double_margin"
+                android:layout_marginEnd="@dimen/double_margin"
+                android:layout_marginBottom="@dimen/double_margin"
+                android:background="@drawable/white_sheet_background"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/double_margin"
+                android:paddingTop="@dimen/double_margin"
+                android:paddingEnd="@dimen/double_margin"
+                android:paddingBottom="50dp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboardHelpView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/inside_sheet_background"
+                    android:padding="@dimen/margin"
+                    >
+
+                <com.shinelw.library.ColorArcProgressBar
+                        android:id="@+id/riskMeter"
+                        android:layout_width="400dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:max_value="100"
+                        />
+
+                <ImageView
+                        android:id="@+id/dashboardHandClock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_hand_clock"
+                        app:layout_constraintBottom_toBottomOf="@+id/riskMeter"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                <TextView
+                        android:id="@+id/lowTextLabel"
+                        style="@style/Text.SmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/low"
+                        app:layout_constraintStart_toStartOf="@+id/riskMeter"
+                        app:layout_constraintTop_toBottomOf="@id/riskMeter"
+                        />
+
+                <TextView
+                        android:id="@+id/highTextLabel"
+                        style="@style/Text.SmallText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/high"
+                        app:layout_constraintEnd_toEndOf="@+id/riskMeter"
+                        app:layout_constraintTop_toBottomOf="@id/riskMeter"
+                        />
+
+                <TextView
+                        android:id="@+id/dashboardWhatCanYouDoLabel"
+                        style="@style/Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/double_margin"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/riskMeter"
+                        tools:text="@string/what_can_you_do"
+                        />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/dashboardInfectionLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/double_margin"
+                    android:background="@color/inside_sheet_background"
+                    android:paddingStart="@dimen/margin"
+                    android:paddingTop="@dimen/triple_margin"
+                    android:paddingEnd="@dimen/margin"
+                    android:paddingBottom="@dimen/triple_margin"
+                    >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/numberOfInfectedPeople"
+                        style="@style/Text.CircleInformText"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/circle_color_background"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="123"
+                        />
+
+
+                <TextView
+                        android:id="@+id/labelInfectedPeople"
+                        style="@style/Text.InformativeText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginEnd="@dimen/margin"
+                        android:text="@string/dashboard_number_of_infected_people_met"
+                        app:layout_constraintBottom_toTopOf="@+id/dashboardTotalNumberPeople"
+                        app:layout_constraintEnd_toStartOf="@+id/dashboardGoInfectedPeopleIcon"
+                        app:layout_constraintStart_toEndOf="@+id/numberOfInfectedPeople"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+
+                <TextView
+                        android:id="@+id/dashboardTotalNumberPeople"
+                        style="@style/Text.InformativeText.small"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/labelInfectedPeople"
+                        app:layout_constraintStart_toStartOf="@+id/labelInfectedPeople"
+                        tools:text="@string/dashboard_number_of_people_met"
+                        />
+
+                <ImageView
+                        android:id="@+id/dashboardGoInfectedPeopleIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/double_margin"
+                        android:src="@drawable/ic_go_further"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+        <TextView
+                android:id="@+id/dashboardReportInfectionButton2"
+                style="@style/TextButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/triple_margin"
+                android:layout_marginEnd="@dimen/triple_margin"
+                android:layout_marginBottom="@dimen/triple_margin"
+                android:text="@string/dashboard_report_infection"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+        <View
+                android:id="@+id/dashboardHelpView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/dashboardReportInfectionButton2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/dashboardReportInfectionButton2"
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

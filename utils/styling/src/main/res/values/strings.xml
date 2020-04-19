@@ -1,0 +1,121 @@
+<resources>
+    <string name="app_name" translatable="false">COVID 19 ALERT</string>
+    <string name="error_occured">We are very sorry but error occurred</string>
+    <string name="ok">Ok</string>
+
+
+    <!--notification-->
+    <string name="notification_title">Contacting with other apps</string>
+    <string name="stop_scanning">Stop scanning</string>
+    <string name="close_app">Close App</string>
+
+    <!--    register-->
+    <string name="register">Enter</string>
+    <string name="register_welcome_text">Create a username to\ncontinue to use the app</string>
+    <string name="register_switch_text"> <![CDATA[I accept the <a href="https://www.covid19-alert.eu/privacy.html"> Privacy Policy </a>]]></string>
+
+    <!--    infected people-->
+    <string name="infected_people_screen_title">Infected people report</string>
+    <string name="infected_people_minutes">%1$s minutes</string>
+    <string name="infected_people_minutes_1m">1 minute</string>
+    <string name="infected_people_minutes_0m">less than minute</string>
+    <string name="infected_distance">%1$s meters</string>
+    <string name="infected_distance_1m">1 meter</string>
+    <string name="no_infected_people_seen">No infected people meet yet!!</string>
+
+    <!-- dashboard -->
+    <string name="dashboard_see_details">Infection detail report</string>
+    <string name="dashboard_report_infection">Report Infection</string>
+    <string name="dashboard_report_infection_end">Report end of infection</string>
+    <string name="dashboard_number_of_people_met">out of %1$d people met</string>
+    <string name="dashboard_risk_of_being_infected">Risk of being infected</string>
+    <string name="dashboard_infection_dialog_report_on_date">Are you sure that you want to report infection on: %1$d-%2$d-%3$d ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="report">Report</string>
+    <string name="dashboard_successfully_reported_title">Bravo!</string>
+    <string name="dashboard_successfully_reported_message">Your contribution helps saves people life! Hope you get better soon!</string>
+    <string name="low">LOW</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dasboard_first_line_title">You have a</string>
+    <string name="dashboard_end_of_second_line">of</string>
+    <string name="dashboard_third_line">being infected</string>
+    <string name="low_risk">low risk</string>
+    <string name="medium_risk">medium risk</string>
+    <string name="high_risk">high risk</string>
+    <string name="infected_state">You are infected</string>
+    <string name="high">HIGH</string>
+    <string name="recovered_state">You are health!</string>
+    <!--    permissions-->
+    <string name="permission_rational_background_location">This app needs background location access</string>
+    <string name="permission_rational_backgroun_location_message">Please grant location access so this app can detect beacons in the background</string>
+    <string name="permission_rejected_permmamently">Functionality limited</string>
+    <string name="permission_rejeceted_permamently_background_message">Since background location access has not been granted, this app will not be able to discover other people in the background, and can\'t protect you and others. You can change it in settings-> Permissions panel</string>
+    <string name="permission_rejeceted_permamently_message">Since location access has not been granted, this app will not be able to discover other people in the background, and can\'t protect you and others. You can change it in settings-> Permissions panel</string>
+    <string name="permission_go_to_settings">Go to settings</string>
+
+
+    <!-- onboarding -->
+
+    <string name="title1">About Covid-19 Alert!</string>
+    <string name="onboarding_text_1">This app warns about possible infection with Covid-19. We inform you when you have been near an infected person and provide you with important and useful information about the pandemic. This way you can help to delay the further spread of Covid-19. </string>
+    <string name="title2">Secure &amp; Anonymous</string>
+    <string name="onboarding_text_2">The Covid 19 Alert! app works with bluetooth data. It registers if your mobile phone has been near a mobile phone of an infected person who is using the app. Covid-19 Alert! also provides health authorities insight into the geographical spread of the virus. However, privacy is guaranteed: the use of the app is completely anonymous and it’s impossible to trace back either you or your phone.
+    </string>
+    <string name="title3">What should you do?</string>
+    <string name="onboarding_text_3">Keep the app running in the background all the time and check it from time to time. In order to stay healthy, wash your hands, practice social distancing, don’t touch your face and #stayathome as much as possible.</string>
+    <string name="what_can_you_do">" <![CDATA[<u> What can you do? </u> ]]> "</string>
+    <string name="dashboard_number_of_infected_people_met">people you\'ve been in contact with are infected</string>
+    <string name="dashboard_sure_want_to_report_infection">Are you sure?</string>
+
+
+    <!--    report screen-->
+    <string name="report_screen_title">Reported infection details</string>
+    <string name="report_subtitle_text">Add the date of your laboratory diagnosis and image with painted out sensitve data with confirmation of your diagnosis</string>
+    <string name="report_date_label">Date</string>
+    <string name="confirm">Confirm</string>
+    <string name="project_create_picture_label">Add Picture</string>
+    <string name="undo">Undo</string>
+    <string name="report_camera_rational_title">Camera Permission required</string>
+    <string name="report_camera_rational_message">Without camera permission you cannot take a photo of your documents</string>
+    <string name="report_photo">Take Photo</string>
+    <string name="report_gallery">Pick Gallery Image</string>
+    <string name="crop">Crop</string>
+    <string name="clear">Clear</string>
+    <string name="save_image">SAVE</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="report_modify_current">Modify current</string>
+    <string name="rational_location_permission_title">Why we need location permission</string>
+    <string name="rational_location_permission_message">We need location permission so the app could work</string>
+
+
+    <!--    dialogs reports recovery -->
+    <string name="dialog_report_infection_title">Infection report</string>
+    <string name="dialog_report_infection_message">You are confirming to be tested on corona with positive result</string>
+    <string name="dialog_report_infection_confirm">Yes</string>
+    <string name="dialog_report_infection_decline">No</string>
+    <string name="dialog_sure_to_be_recovery_title">Report recovery</string>
+    <string name="dialog_sure_to_be_recovery_message">You are about to report that you have recovered from virus infection</string>
+    <string name="dialog_sure_to_be_recovery_confirm">Confirm</string>
+    <string name="dialog_sure_to_be_recovery_deny">Abort</string>
+    <string name="dialog_success_report_recovery_title">Wonderful</string>
+    <string name="dialog_success_report_recovery_message">We are so happy that you have recovered !! Enjoy your live without that despicable virus</string>
+
+    <!--    share our app-->
+    <string name="share_text">I am using Covid-19 Alert to stop virus spreading. #stayAtHome  https://covid19-alert.eu/</string>
+    <string name="share_title">COVID 19-Alert!</string>
+    <string name="choose_app_title">Choose app to share COVID19 ALERT application</string>
+
+    <!--    qr code scan-->
+    <string name="scan_qr_code">Scan QR code</string>
+    <string name="scan_to_login">Scan provided QR to login</string>
+    <string name="wrong_qr_code">Wrong QR code format</string>
+
+
+    <!--    settings-->
+    <string name="settings_name">Name: %1$s</string>
+    <string name="settings_birthday">Birthday: %1$s</string>
+    <string name="logout">Logout</string>
+    <string name="scan_to_logout">Scan to logout</string>
+
+</resources>

@@ -1,0 +1,28 @@
+apply plugin: 'com.android.library'
+
+
+version='1.0.3'
+android {
+    compileSdkVersion compile_sdk_version
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion min_sdk_version
+        targetSdkVersion compile_sdk_version
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+
+    implementation app_compat
+    implementation project(":utils:styling")
+}

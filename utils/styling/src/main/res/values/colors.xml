@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4C45F3</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">@color/button_color</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF4652</color>
+    <color name="red_alpha">#59FF4652</color>
+    <color name="azul">#2857e5</color>
+    <color name="black_50">#80000000</color>
+    <color name="font_color">@color/text</color>
+    <color name="text">#271335</color>
+    <color name="text_secondary">#232328</color>
+    <color name="button">#4C45F3</color>
+    <color name="disabled">#554C45F3</color>
+
+    <color name="arch_border">#294C45F3</color>
+    <color name="ach_inside">#4DFFFFFF</color>
+    <color name="risk_background">#FFD9D4</color>
+    <color name="medium_backgroun">#FFE5C3</color>
+    <color name="low_background">#C4F2EB</color>
+    <color name="low_risk">#00B79B</color>
+    <color name="medium_risk">#FFA335</color>
+    <color name="high_risk">#FF4652</color>
+    <color name="background_sheet_color">#F8F8FF</color>
+    <color name="button_color">#4C45F3</color>
+    <color name="shady_blue">#D0D0EE</color>
+    <color name="inside_sheet_background">#F8F8FF</color>
+    <color name="text_color">#271335</color>
+    <color name="warm_grey">#979797</color>
+</resources>
